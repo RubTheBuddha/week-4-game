@@ -1,12 +1,24 @@
 
 //  make a start game function
+<<<<<<< HEAD
 
+=======
+var crystal1 =rand unique
+var crystal2 =rand unique
+var crystal3 =rand unique
+var crystal4 =rand unique
+var goal = "";
+var points = 0;  // add func points +
+
+var rand=
+>>>>>>> 7e604ae51b1b61a4977eb2c501dc668ad62a5b59
 
 //---------------
 var wins ="";
 var losses= "";
 var score = "";
 
+<<<<<<< HEAD
 console.log(goal);
 console.log(crystal2);
 console.log(crystal3);
@@ -75,3 +87,12 @@ console.log(crystalClick2);
 console.log(crystalClick3);
 console.log(crystalClick4);
 }
+=======
+
+// create math.random for crystals
+ // Create click events for crytals that displays the value and adds it to
+
+ // if statement that says if above goal you lose is == to goal you increment winss++ 
+ //or losses ++
+ //rune startgame again
+>>>>>>> 7e604ae51b1b61a4977eb2c501dc668ad62a5b59
