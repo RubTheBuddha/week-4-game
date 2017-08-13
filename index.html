@@ -4,7 +4,8 @@
 	<title>Crystal Game</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
-	<script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	
 
 
@@ -27,14 +28,99 @@
 
 
 		</div>
-		<div id="goal"></div>
-		<div id="win-lose"></div>
-		<div id="crystal1"></div>
-		<div id="crystal2"></div>
-		<div id="crystal3"></div>
-		<div id="crystal4"></div>
-		<div id="score"></div>
+		<div id="goal">39</div>
+		<div id="win-lose"><p>Wins: 0 </p> <p>Losses: 0 </p></div>
+		<div id="crystalSlot1"><img id="crystal1" src="assets/amgr.png"></div>
+		<div id="crystalSlot2"><img id="crystal2" src="assets/lul.png"></div>
+		<div id="crystalSlot3"><img id="crystal3" src="assets/thiccplant.png"></div>
+		<div id="crystalSlot4"><img id="crystal4" src="assets/thonk.png"></div>
+		<div id="info">Your Current Score Is :</div>
+		<div id="points">0</div>
+
+<script type="text/javascript">
+
+var crystalClick1 = Math.floor((Math.random() * 10) + 1);
+var crystalClick2 = Math.floor((Math.random() * 10) + 1);
+var crystalClick3 = Math.floor((Math.random() * 10) + 1);
+var crystalClick4 = Math.floor((Math.random() * 10) + 1);
+var goal = Math.floor((Math.random() * 20) + 30);
+var points = 0;  // add func points +
 
 
+var wins ="";
+var losses= "";
+
+
+ // Create click events for crytals that displays the value and adds it to
+ function startGame(){
+ 	crystalClick1;
+ 	crystalClick2;
+ 	crystalClick3;
+ 	crystalClick4;
+ 	$("#goal").html(goal)
+ 	points = 0;
+
+
+ console.log(goal);
+console.log(crystalClick1)
+console.log(crystalClick2);
+console.log(crystalClick3);
+console.log(crystalClick4);
+ } 
+
+ if (points == goal) {
+	alert("You win!");
+}
+
+if (points > goal) {
+	alert("You Lose");
+}
+
+ $("#crystalSlot1").click(function(){
+ 	points = points + crystalClick1;
+ 	$("#points").html(points);
+ 	console.log(points);
+
+ });
+
+$("#crystalSlot2").click(function(){
+    points = points + crystalClick2;
+ 	$("#points").html(points);
+ 	console.log(points);
+});
+
+$("#crystalSlot3").click(function(){
+    points = points + crystalClick3;
+ 	$("#points").html(points);
+ 	console.log(points);
+});
+
+$("#crystalSlot4").click(function(){
+    points = points + crystalClick4;
+ 	$("#points").html(points);
+ 	console.log(points);
+ 	
+});
+
+if (points == goal) {
+	win++;
+	alert("WE GOT A WINNER!!");
+	startGame();
+}
+
+if(points > goal) {
+	losses++;
+	alert("LOOOOOOOSER");
+	startGame();
+
+
+}
+
+
+
+startGame();
+
+
+</script>
 </body>
 </html>
